@@ -152,7 +152,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 5.5, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,9 +227,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spritePrevia: {fileID: 686200080}
   posicaoInvalida: {fileID: 792150050}
-  colisaoTorre:
+  areaValida:
+    serializedVersion: 2
+    m_Bits: 256
+  areaInvalida:
     serializedVersion: 2
     m_Bits: 192
+--- !u!1 &150485611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150485612}
+  - component: {fileID: 150485613}
+  m_Layer: 8
+  m_Name: Area (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150485612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150485611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.5, y: -2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1549477464}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &150485613
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150485611}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
 --- !u!1001 &300569475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243,23 +303,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1647224060}
+      objectReference: {fileID: 300569477}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelecionarTorre
+      value: Selecionar
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Loja, Assembly-CSharp
+      value: BotaoLoja, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -269,6 +329,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: loja
+      value: 
+      objectReference: {fileID: 1647224060}
     - target: {fileID: 1459636916298719200, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_Name
       value: SelecionarTorre (4)
@@ -364,6 +432,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5738134377106182813, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
   m_PrefabInstance: {fileID: 300569475}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &300569477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+  m_PrefabInstance: {fileID: 300569475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6893bac61dd64243baa9fecadc3862d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &521157675
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +472,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 5, y: -4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,7 +529,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: -2.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,23 +570,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1647224060}
+      objectReference: {fileID: 539854257}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelecionarTorre
+      value: Selecionar
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Loja, Assembly-CSharp
+      value: BotaoLoja, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -517,6 +596,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: id
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: loja
+      value: 
+      objectReference: {fileID: 1647224060}
     - target: {fileID: 1459636916298719200, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_Name
       value: SelecionarTorre (5)
@@ -612,6 +699,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5738134377106182813, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
   m_PrefabInstance: {fileID: 539854255}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &539854257 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+  m_PrefabInstance: {fileID: 539854255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6893bac61dd64243baa9fecadc3862d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &634016944
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +859,89 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &731999462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731999463}
+  - component: {fileID: 731999465}
+  - component: {fileID: 731999464}
+  m_Layer: 5
+  m_Name: TextoDescricao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &731999463
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731999462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 940082971}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &731999464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731999462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 23
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Essa torre faz isso aqui.
+
+    Custo:
+
+    Dano(?)'
+--- !u!222 &731999465
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731999462}
+  m_CullTransparentMesh: 1
 --- !u!1 &792150050
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +1025,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &940082970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940082971}
+  - component: {fileID: 940082973}
+  - component: {fileID: 940082972}
+  m_Layer: 5
+  m_Name: Descricao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &940082971
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940082970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 731999463}
+  m_Father: {fileID: 2058135349}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -300, y: 0}
+  m_SizeDelta: {x: 200, y: 150}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &940082972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940082970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &940082973
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940082970}
+  m_CullTransparentMesh: 1
 --- !u!1 &1081547833
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +1130,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: -2.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1063,6 +1320,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1178698770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178698771}
+  - component: {fileID: 1178698772}
+  m_Layer: 8
+  m_Name: Area (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1178698771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178698770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5, y: -2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1549477464}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1178698772
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178698770}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &1198486767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1406,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 6, y: -4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1133,23 +1447,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1647224060}
+      objectReference: {fileID: 1292388436}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelecionarTorre
+      value: Selecionar
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Loja, Assembly-CSharp
+      value: BotaoLoja, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1159,6 +1473,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: loja
+      value: 
+      objectReference: {fileID: 1647224060}
     - target: {fileID: 1459636916298719200, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_Name
       value: SelecionarTorre (3)
@@ -1254,6 +1576,108 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5738134377106182813, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
   m_PrefabInstance: {fileID: 1292388434}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1292388436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+  m_PrefabInstance: {fileID: 1292388434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6893bac61dd64243baa9fecadc3862d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1396992916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396992917}
+  - component: {fileID: 1396992918}
+  m_Layer: 8
+  m_Name: Area (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1396992917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396992916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1549477464}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1396992918
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396992916}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &1549477463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549477464}
+  m_Layer: 8
+  m_Name: AreaTorres
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1549477464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549477463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1779118404}
+  - {fileID: 150485612}
+  - {fileID: 1178698771}
+  - {fileID: 1396992917}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647224055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,6 +1807,65 @@ MonoBehaviour:
   gerenciadorTorres: {fileID: 2006144668}
   qtdInicialMoedas: 25
   txtMoedas: {fileID: 1149486507}
+  objDescricao: {fileID: 940082970}
+  txtDescricao: {fileID: 731999464}
+--- !u!1 &1779118403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779118404}
+  - component: {fileID: 1779118405}
+  m_Layer: 8
+  m_Name: Area (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779118404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779118403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.5, y: 2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1549477464}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1779118405
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779118403}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &1801148939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!66 &1801148940
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -1418,73 +1901,9 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1198486768}
-    m_ColliderPaths:
-    - - X: 69999707
-        Y: -40000000
-      - X: 69999707
-        Y: -30000000
-      - X: -60000000
-        Y: -30000293
-      - X: -59999707
-        Y: -40000000
-  - m_Collider: {fileID: 521157676}
-    m_ColliderPaths:
-    - - X: 69999707
-        Y: -10000000
-      - X: 69999707
-        Y: 0
-      - X: -40000000
-        Y: -293
-      - X: -39999707
-        Y: -10000000
-  - m_Collider: {fileID: 1081547834}
-    m_ColliderPaths:
-    - - X: -60000293
-        Y: -40000000
-      - X: -60000293
-        Y: 40000000
-      - X: -70000000
-        Y: 39999707
-      - X: -69999707
-        Y: -40000000
-  - m_Collider: {fileID: 15464110}
-    m_ColliderPaths:
-    - - X: 49999707
-        Y: 30000000
-      - X: 49999707
-        Y: 40000000
-      - X: -70000000
-        Y: 39999707
-      - X: -69999707
-        Y: 30000000
-  - m_Collider: {fileID: 533888153}
-    m_ColliderPaths:
-    - - X: 79999707
-        Y: -40000000
-      - X: 79999707
-        Y: 40000000
-      - X: 70000000
-        Y: 39999707
-      - X: 70000293
-        Y: -40000000
+  m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: -6.9999704, y: -3.999971}
-      - {x: 7.9999704, y: -3.999971}
-      - {x: 7.999942, y: 4}
-      - {x: 7, y: 3.9999416}
-      - {x: 6.9999857, y: 0}
-      - {x: -4, y: -0.000058600002}
-      - {x: -3.9999416, y: -1}
-      - {x: 7.0000186, y: -1.0000294}
-      - {x: 6.999996, y: -3}
-      - {x: -6.000029, y: -3}
-      - {x: -6, y: 3}
-      - {x: 4.999971, y: 3.0000293}
-      - {x: 4.999942, y: 4}
-      - {x: -7, y: 3.9999416}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1801148941
@@ -1540,23 +1959,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1647224060}
+      objectReference: {fileID: 1936955364}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelecionarTorre
+      value: Selecionar
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Loja, Assembly-CSharp
+      value: BotaoLoja, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1566,6 +1985,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: loja
+      value: 
+      objectReference: {fileID: 1647224060}
     - target: {fileID: 1459636916298719200, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_Name
       value: SelecionarTorre (2)
@@ -1661,6 +2088,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5738134377106182813, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
   m_PrefabInstance: {fileID: 1936955362}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1936955364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+  m_PrefabInstance: {fileID: 1936955362}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6893bac61dd64243baa9fecadc3862d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006144667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,6 +2237,7 @@ RectTransform:
   m_Children:
   - {fileID: 1647224056}
   - {fileID: 1149486506}
+  - {fileID: 940082971}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1814,34 +2253,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1647224056}
     m_Modifications:
-    - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 1935077825, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
+      propertyPath: loja
       value: 
       objectReference: {fileID: 1647224060}
-    - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelecionarTorre
-      objectReference: {fileID: 0}
-    - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Loja, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 220676315, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1459636916298719200, guid: 8916ca7b38f497d48a052cc8aad2f6c0, type: 3}
       propertyPath: m_Name
       value: SelecionarTorre (1)

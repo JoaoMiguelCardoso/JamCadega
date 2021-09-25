@@ -9,6 +9,8 @@ public class Loja : MonoBehaviour
     [SerializeField] GerenciadorTorres gerenciadorTorres;
     [SerializeField] int qtdInicialMoedas;
     [SerializeField] Text txtMoedas;
+    [SerializeField] GameObject objDescricao;
+    [SerializeField] Text txtDescricao;
 
     int moedas;
     DadosTorre ultimaTorre;
@@ -40,5 +42,17 @@ public class Loja : MonoBehaviour
     {
         moedas += valor;
         txtMoedas.text = moedas.ToString();
+    }
+
+    public void AlterarObjDescricao(bool ativo)
+    {
+        objDescricao.SetActive(ativo);
+    }
+
+    public void ExibirDescricao(int id, float posY)
+    {
+        AlterarObjDescricao(true);
+        txtDescricao.text = torres[id].descricao;
+        objDescricao.transform.position = new Vector2(objDescricao.transform.position.x, posY);
     }
 }

@@ -8,4 +8,6 @@ public class DadosTorre : ScriptableObject
     public GameObject torre;
     public int custo;
     public Sprite sprite;
+    [Multiline]
+    public string descricao;
 }
