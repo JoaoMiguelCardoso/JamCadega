@@ -7,6 +7,7 @@ public class DadosTorre : ScriptableObject
 {
     public GameObject torre;
     public int custo;
+    public int valorArea;
     public Sprite sprite;
     [Multiline]
     public string descricao;

@@ -11,6 +11,7 @@ public class Loja : MonoBehaviour
     [SerializeField] Text txtMoedas;
     [SerializeField] GameObject objDescricao;
     [SerializeField] Text txtDescricao;
+    [SerializeField] Tabuleiro tabuleiro;
 
     int moedas;
     DadosTorre ultimaTorre;
@@ -33,9 +34,10 @@ public class Loja : MonoBehaviour
             gerenciadorTorres.EscolherTorre(ultimaTorre);
     }
 
-    public void TorreComprada()
+    public void TorreComprada(Vector2 posicao)
     {
         AlterarMoedas(-ultimaTorre.custo);
+        tabuleiro.AlterarValorArea(posicao, ultimaTorre.valorArea);
     }
 
     void AlterarMoedas(int valor)

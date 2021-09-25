@@ -7,6 +7,7 @@ public class GerenciadorTorres : MonoBehaviour
 {
     [SerializeField] PreviaTorre previa;
     [SerializeField] Loja loja;
+    [SerializeField] Tabuleiro tabuleiro;
 
     DadosTorre torreAtual;
 
@@ -39,6 +40,8 @@ public class GerenciadorTorres : MonoBehaviour
     {
         previa.gameObject.SetActive(ativa);
         previa.AtualizarPosicao();
+
+        tabuleiro.ExibirValoresAreas(ativa);
     }
 
     void AlterarSpritePrevia(Sprite sprite)
@@ -57,6 +60,6 @@ public class GerenciadorTorres : MonoBehaviour
     {
         Instantiate(torre, posicao, Quaternion.identity);
         AlterarEstadoPrevia(false);
-        loja.TorreComprada();
+        loja.TorreComprada(posicao);
     }
 }
