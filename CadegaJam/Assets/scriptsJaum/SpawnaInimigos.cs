@@ -17,11 +17,15 @@ public class SpawnaInimigos : MonoBehaviour
     private int foram;
     private int Wave;
     private int InimigoVari;
+    private int waveinimigo;
+    private int tipos;
+    private int podetipo = 1;
 
     void Start()
     {
         quantidadeWave = QuantidadeInicial;
         InimigoVari = QuantidadeWaves/Inimigos.Count ;
+        tipos = Inimigos.Count;
     }
 
     void Update()
@@ -35,9 +39,7 @@ public class SpawnaInimigos : MonoBehaviour
                 if(foram <= quantidadeWave){
                     if(tempoInimigo < Time.time){
                         if(surge == true){
-
-
-                            Instantiate(Inimigos[0], transform.position, Quaternion.identity);
+                            instancia();
                             tempoInimigo = TempoEntreInimigos + Time.time;
                             surge= false;
                             foram ++;
@@ -50,13 +52,21 @@ public class SpawnaInimigos : MonoBehaviour
                     quantidadeWave = quantidadeWave +incremento;
                     foram = 0;
                     Wave ++;
+                    waveinimigo ++;
                     tempoatual = TempoEntreWaves + Time.time;
                     surge = true;
                 }
             }
         }
+        if(waveinimigo == InimigoVari){
+            if(podetipo < tipos){
+                podetipo ++;
+                waveinimigo = 0;
+            }
+        }
     }
     private void instancia(){
-        
+        int a = Random.Range(0, podetipo);
+        Instantiate(Inimigos[a], transform.position, Quaternion.identity);
     }
 }
