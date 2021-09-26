@@ -2717,7 +2717,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454643841}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
 --- !u!1 &466720542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,8 +2771,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   tabuleiro: {fileID: 85202487}
-=======
->>>>>>> Stashed changes
 --- !u!1 &470777149
 GameObject:
   m_ObjectHideFlags: 0
