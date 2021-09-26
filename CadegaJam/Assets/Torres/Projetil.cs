@@ -5,8 +5,10 @@ using UnityEngine;
 public class Projetil : MonoBehaviour
 {
     [SerializeField] float velocidade;
+    [SerializeField] float satisfacao;
     Torre torre;
     Transform alvo;
+    Satisfacao satisfacaoInimigo;
 
     void Start()
     {
@@ -23,9 +25,15 @@ public class Projetil : MonoBehaviour
         torre = t;
     }
 
-    public void DefinirAlvo(Transform t)
+    public void DefinirAlvo(Transform t, Satisfacao s)
     {
         alvo = t;
+        satisfacaoInimigo = s;
+    }
+
+    public float QtdSatisfacao()
+    {
+        return satisfacao;
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -33,6 +41,9 @@ public class Projetil : MonoBehaviour
         if(col.transform == alvo)
         {
             torre.RetornarProjetil(this);
+            satisfacaoInimigo.AumentarSatisfacao(satisfacao);
+            DefinirAlvo(null, null);
+
             gameObject.SetActive(false);
         }
     }

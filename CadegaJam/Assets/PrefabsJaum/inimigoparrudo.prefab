@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 873549908257378109}
   - component: {fileID: 1654681815473080429}
   - component: {fileID: 3545363385034803466}
+  - component: {fileID: 7822967745346489365}
   m_Layer: 0
   m_Name: inimigoparrudo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 4
+  aumentoDeReputacao: 0
+  decrementoDeReputacao: 0
 --- !u!114 &1654681815473080429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,8 +63,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   satisfacaoInicial: 20
-  SatisfacaoMax: 200
-  SatsfacaoPorTiro: 1
+  satisfacaoMax: 0
+  satsfacaoPorTiro: 0
   satisfeito: 0
 --- !u!61 &3545363385034803466
 BoxCollider2D:
@@ -89,6 +92,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &7822967745346489365
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873549908257378110}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2262115744650846695
 GameObject:
   m_ObjectHideFlags: 0

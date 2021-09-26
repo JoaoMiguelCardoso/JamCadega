@@ -64,7 +64,15 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1654681815473080429, guid: 47e8562211f851548bbd1f7c82ae8b85, type: 3}
+      propertyPath: satisfacaoMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654681815473080429, guid: 47e8562211f851548bbd1f7c82ae8b85, type: 3}
       propertyPath: SatsfacaoPorTiro
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654681815473080429, guid: 47e8562211f851548bbd1f7c82ae8b85, type: 3}
+      propertyPath: satsfacaoPorTiro
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4328928107632530249, guid: 47e8562211f851548bbd1f7c82ae8b85, type: 3}

@@ -9,9 +9,10 @@ public class Torre : MonoBehaviour
     [SerializeField] Projetil projetil;
 
     List<Transform> inimigos = new List<Transform>();
-    Transform inimigoAtual;
+    Transform alvoAtual;
     float tempoAtaque;
     List<Projetil> projeteis = new List<Projetil>();
+    Satisfacao inimigoAtual;
 
     void Start()
     {
@@ -20,10 +21,13 @@ public class Torre : MonoBehaviour
 
     void Update()
     {
-        if (inimigoAtual == null)
+        if (alvoAtual == null)
         {
             if (inimigos.Count > 0)
-                inimigoAtual = inimigos[0];
+            {
+                alvoAtual = inimigos[0];
+                inimigoAtual = alvoAtual.GetComponent<Satisfacao>();
+            }
         }
         else
         {
@@ -39,14 +43,17 @@ public class Torre : MonoBehaviour
 
     void Atirar()
     {
-        if(projeteis.Count == 0)
+        if (projeteis.Count == 0)
             InstanciarProjeteis();
 
         Projetil p = projeteis[0];
         p.gameObject.SetActive(true);
         p.transform.position = transform.position;
-        p.DefinirAlvo(inimigoAtual);
+        p.DefinirAlvo(alvoAtual, inimigoAtual);
         projeteis.Remove(p);
+
+        if(inimigoAtual.SatisfacaoSuficiente(projetil.QtdSatisfacao()))
+            TrocarAlvo();
     }
 
     void InstanciarProjeteis()
@@ -65,6 +72,13 @@ public class Torre : MonoBehaviour
         projeteis.Add(p);
     }
 
+    void TrocarAlvo()
+    {
+        inimigos.Remove(alvoAtual);
+        alvoAtual = null;
+        inimigoAtual = null;
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (tagsAtacar.Contains(col.tag))
@@ -73,8 +87,8 @@ public class Torre : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.transform == inimigoAtual)
-            inimigoAtual = null;
+        if (col.transform == alvoAtual)
+            TrocarAlvo();
 
         if (inimigos.Contains(col.transform))
             inimigos.Remove(col.transform);

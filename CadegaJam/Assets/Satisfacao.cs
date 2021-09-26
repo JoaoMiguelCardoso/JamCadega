@@ -4,17 +4,33 @@ using UnityEngine;
 
 public class Satisfacao : MonoBehaviour
 {
-    [SerializeField]private float satisfacaoInicial;
-    [SerializeField]private float SatisfacaoMax;
-    [SerializeField]private float SatsfacaoPorTiro;
-    private float SatisfacaoAtual;
+    [SerializeField] private float satisfacaoInicial;
+    [SerializeField] private float satisfacaoMax;
+    [SerializeField] private float satsfacaoPorTiro;
+    private float satisfacaoAtual;
     public bool satisfeito;
+
     void Start()
     {
-        SatisfacaoAtual = satisfacaoInicial;
+        satisfacaoAtual = satisfacaoInicial;
     }
+
     void Update()
     {
-        satisfeito = (SatisfacaoAtual >= SatisfacaoMax);
+        
+    }
+
+    public bool AumentarSatisfacao(float satisfacao)
+    {
+        satisfacaoAtual = Mathf.Clamp(satisfacaoAtual + satisfacao, 0, satisfacaoMax);
+
+        satisfeito = satisfacaoAtual == satisfacaoMax;
+
+        return satisfeito;
+    }
+
+    public bool SatisfacaoSuficiente(float satisfacao)
+    {
+        return satisfacaoAtual + satisfacao >= satisfacaoMax;
     }
 }
