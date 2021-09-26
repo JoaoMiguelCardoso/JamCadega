@@ -11,6 +11,7 @@ TagManager:
   - spawner
   - reputa
   - winlose
+  - Audio
   layers:
   - Default
   - TransparentFX
