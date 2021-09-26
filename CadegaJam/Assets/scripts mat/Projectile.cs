@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : Atira
+public class Projectile : MonoBehaviour
 {
     
     public float speed;
@@ -16,8 +16,9 @@ public class Projectile : Atira
     private void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, Enemy.position, speed * Time.deltaTime);
-    if (transform.position == Enemy.position)
+        if (transform.position == Enemy.position)
         {
+            Debug.Log("aqui");
             DestroyProjectile();
         }
     }
@@ -25,11 +26,13 @@ public class Projectile : Atira
     {
         if (other.CompareTag("Enemy"))
         {
+            Debug.Log("ali  :" + other.name);
             DestroyProjectile();
         }
     }
     void DestroyProjectile()
     {
+        Debug.Log("destroi");
         Destroy(gameObject);
     }
 }

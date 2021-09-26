@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3929953458797713777, guid: 10aa4f53a83a7354782f64b02f5cb6ca, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Allie
       objectReference: {fileID: 0}
     - target: {fileID: 5400002173173287336, guid: 10aa4f53a83a7354782f64b02f5cb6ca, type: 3}
       propertyPath: m_Name
@@ -394,23 +394,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3929953458797713777, guid: 10aa4f53a83a7354782f64b02f5cb6ca, type: 3}
   m_PrefabInstance: {fileID: 1441452677}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1839184712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839184710}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c59edc4e5983c4f851a1de4df2d487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AlvosPossiveis: 01000000
-  Targets: []
-  AlvoAtual: {fileID: 0}
-  StartTimeBtwShots: 1
-  projectile: {fileID: 4285177139670810873, guid: f7f8f2a35bec3d448883fdab72bb322b, type: 3}
 --- !u!114 &1839184713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,3 +409,5 @@ MonoBehaviour:
   AlvosPossiveis: 01000000
   Targets: []
   AlvoAtual: {fileID: 0}
+  StartTimeBtwShots: 0
+  projectile: {fileID: 4285177139670810873, guid: f7f8f2a35bec3d448883fdab72bb322b, type: 3}

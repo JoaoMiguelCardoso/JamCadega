@@ -23,6 +23,7 @@ public class SpawnaInimigos : MonoBehaviour
 
     void Start()
     {
+        tempoatual = TempoEntreWaves;
         quantidadeWave = QuantidadeInicial;
         InimigoVari = QuantidadeWaves/Inimigos.Count ;
         tipos = Inimigos.Count;
@@ -68,5 +69,8 @@ public class SpawnaInimigos : MonoBehaviour
     private void instancia(){
         int a = Random.Range(0, podetipo);
         Instantiate(Inimigos[a], transform.position, Quaternion.identity);
+    }
+    public void pulatempo(){
+        tempoatual = Time.time;
     }
 }

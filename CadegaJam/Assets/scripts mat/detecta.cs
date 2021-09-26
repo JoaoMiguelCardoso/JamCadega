@@ -9,6 +9,15 @@ public class detecta : MonoBehaviour
     public List<Criaturas> Targets = new List<Criaturas>();
     public Criaturas AlvoAtual;
 
+    private float TimeBtwShots;
+    public float StartTimeBtwShots;
+    public GameObject projectile;
+
+    void Start()
+    {
+        TimeBtwShots = StartTimeBtwShots;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Criaturas>()) {
@@ -42,7 +51,7 @@ public class detecta : MonoBehaviour
 
         if (Targets.Count > 0 && AlvoAtual == null) 
         {
-            int RandomTarget = Random.Range(0,Targets.Count + 1);
+            int RandomTarget = Random.Range(0,Targets.Count );
             Debug.Log(RandomTarget);
             AlvoAtual = Targets[RandomTarget];
         }
@@ -50,6 +59,16 @@ public class detecta : MonoBehaviour
     private void Update()
     {
         Escolhe();
-       
+        if(TimeBtwShots <= 0 && Targets.Count > 0)
+        {
+            GameObject Bala = Instantiate(projectile, transform.position, Quaternion.identity);
+            Bala.GetComponent<Projectile>().Enemy = AlvoAtual.transform;
+            TimeBtwShots = StartTimeBtwShots;
+        }
+        else
+        {
+            TimeBtwShots -= Time.deltaTime;
+        }
+
     }
 }
