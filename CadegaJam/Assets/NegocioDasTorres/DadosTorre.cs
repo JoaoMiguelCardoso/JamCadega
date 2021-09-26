@@ -11,4 +11,5 @@ public class DadosTorre : ScriptableObject
     public Sprite sprite;
     [Multiline]
     public string descricao;
+    public float alcance;
 }

@@ -43,6 +43,12 @@ public class Loja : MonoBehaviour
         tabuleiro.AlterarValorArea(posicao, ultimaTorre.valorArea);
     }
 
+    public void TorreVendida(Vector2 posicao, DadosTorre dados)
+    {
+        AlterarMoedas(Mathf.RoundToInt(dados.custo / 2));
+        tabuleiro.AlterarValorArea(posicao, -dados.valorArea);
+    }
+
     void AlterarMoedas(int valor)
     {
         moedas += valor;

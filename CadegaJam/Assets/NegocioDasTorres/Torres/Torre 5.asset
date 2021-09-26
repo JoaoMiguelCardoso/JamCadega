@@ -17,3 +17,4 @@ MonoBehaviour:
   valorArea: 20
   sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
   descricao: Sim
+  alcance: 3

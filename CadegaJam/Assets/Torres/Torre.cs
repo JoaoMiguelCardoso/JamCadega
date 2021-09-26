@@ -1,22 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Torre : MonoBehaviour
+public class Torre : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] List<string> tagsAtacar;
     [SerializeField] float intervaloAtaque;
     [SerializeField] Projetil projetil;
+    [SerializeField] Canvas objRemover;
+    [SerializeField] DadosTorre dadosTorre;
 
     List<Transform> inimigos = new List<Transform>();
     Transform alvoAtual;
     float tempoAtaque;
     List<Projetil> projeteis = new List<Projetil>();
     Satisfacao inimigoAtual;
+    GerenciadorTorres gerenciadorTorres;
 
     void Start()
     {
-
+        objRemover.worldCamera = Camera.main;
     }
 
     void Update()
@@ -52,7 +56,7 @@ public class Torre : MonoBehaviour
         p.DefinirAlvo(alvoAtual, inimigoAtual);
         projeteis.Remove(p);
 
-        if(inimigoAtual.SatisfacaoSuficiente(projetil.QtdSatisfacao()))
+        if (inimigoAtual.SatisfacaoSuficiente(projetil.QtdSatisfacao()))
             TrocarAlvo();
     }
 
@@ -79,6 +83,11 @@ public class Torre : MonoBehaviour
         inimigoAtual = null;
     }
 
+    public void DefinirGerenciador(GerenciadorTorres gerenciador)
+    {
+        gerenciadorTorres = gerenciador;
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (tagsAtacar.Contains(col.tag))
@@ -92,5 +101,29 @@ public class Torre : MonoBehaviour
 
         if (inimigos.Contains(col.transform))
             inimigos.Remove(col.transform);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            bool remover = gerenciadorTorres.AutorizarRemocao(this);
+
+            if (objRemover.gameObject.activeSelf)
+                AlterarObjRemover(false);
+            else
+                AlterarObjRemover(remover);
+        }
+    }
+
+    public void AlterarObjRemover(bool ativo)
+    {
+        objRemover.gameObject.SetActive(ativo);
+    }
+
+    public void ConfirmarRemocao()
+    {
+        gerenciadorTorres.VenderTorre(transform.position, dadosTorre);
+        Destroy(gameObject);
     }
 }

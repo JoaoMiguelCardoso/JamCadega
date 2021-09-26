@@ -10,6 +10,7 @@ public class GerenciadorTorres : MonoBehaviour
     [SerializeField] Tabuleiro tabuleiro;
 
     DadosTorre torreAtual;
+    Torre torreSelecionada;
 
     void Start()
     {
@@ -20,13 +21,10 @@ public class GerenciadorTorres : MonoBehaviour
     {
         if (previa.gameObject.activeSelf)
         {
-            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+            if (Input.GetMouseButtonDown(0))
             {
                 if (previa.PosicaoValida())
-                {
-                    Vector2 posPrevia = previa.transform.position;
-                    PosicionarTorre(torreAtual.torre, posPrevia);
-                }
+                    PosicionarTorre(torreAtual.torre, previa.transform.position);
             }
 
             if (Input.GetMouseButtonDown(1))
@@ -55,12 +53,31 @@ public class GerenciadorTorres : MonoBehaviour
         AlterarEstadoPrevia(true);
         AlterarSpritePrevia(torreAtual.sprite);
         previa.DefinirValor(torreAtual.valorArea);
+        previa.DefinirAlcance(torreAtual.alcance);
+
+        if(torreSelecionada != null)
+            torreSelecionada.AlterarObjRemover(false);
     }
 
     void PosicionarTorre(GameObject torre, Vector2 posicao)
     {
-        Instantiate(torre, posicao, Quaternion.identity);
+        Torre t = Instantiate(torre, posicao, Quaternion.identity).GetComponent<Torre>();
+        t.DefinirGerenciador(this);
         AlterarEstadoPrevia(false);
         loja.TorreComprada(posicao);
+    }
+
+    public bool AutorizarRemocao(Torre t)
+    {
+        if(!previa.gameObject.activeSelf && torreSelecionada != null && torreSelecionada != t)
+            torreSelecionada.AlterarObjRemover(false);
+
+        torreSelecionada = t;
+        return !previa.gameObject.activeSelf;
+    }
+
+    public void VenderTorre(Vector2 posicao, DadosTorre dados)
+    {
+        loja.TorreVendida(posicao, dados);
     }
 }

@@ -76,6 +76,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3550640247091863197, guid: f210b25df45445b4f95e9864954c7f16, type: 3}
     - target: {fileID: 3197091969650442023, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
+      propertyPath: dadosTorre
+      value: 
+      objectReference: {fileID: 11400000, guid: 75c1e7869e1e6db4b8b88420a4f5234a, type: 2}
+    - target: {fileID: 3197091969650442023, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
       propertyPath: intervaloAtaque
       value: 0.1
       objectReference: {fileID: 0}

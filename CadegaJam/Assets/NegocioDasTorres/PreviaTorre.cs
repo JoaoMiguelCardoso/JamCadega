@@ -9,6 +9,7 @@ public class PreviaTorre : MonoBehaviour
     [SerializeField] LayerMask areaValida;
     [SerializeField] LayerMask areaInvalida;
     [SerializeField] Tabuleiro tabuleiro;
+    [SerializeField] Transform objAlcance;
 
     bool posValida;
     Vector2 posAjustada;
@@ -57,6 +58,11 @@ public class PreviaTorre : MonoBehaviour
     public void DefinirValor(int valor)
     {
         valorAtual = valor;
+    }
+
+    public void DefinirAlcance(float alcance)
+    {
+        objAlcance.localScale = Vector2.one * alcance * 2;
     }
 
     public bool PosicaoValida()

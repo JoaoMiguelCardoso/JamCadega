@@ -58,7 +58,7 @@ public class Tabuleiro : MonoBehaviour
 
                 if (posicoes.ContainsKey(pos))
                 {
-                    posicoes[pos] += pos == posicao ? 50 : valor;
+                    posicoes[pos] += pos == posicao ? valor * 50 : valor;
                     posicoes[pos] = Mathf.Clamp(posicoes[pos], 0, 50);
 
                     valores[pos].AtualizarValor(posicoes[pos]);
