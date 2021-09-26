@@ -28,6 +28,8 @@ public class SpawnaInimigos : MonoBehaviour
         quantidadeWave = QuantidadeInicial;
         InimigoVari = QuantidadeWaves/Inimigos.Count ;
         tipos = Inimigos.Count;
+        WavesRestantes = QuantidadeWaves;
+        GameObject.FindGameObjectWithTag("reputa").GetComponent<reputacao>().iniciou = true;
     }
 
     void Update()

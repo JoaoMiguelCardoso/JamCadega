@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField]private GameObject fundo;
     [SerializeField]private GameObject BotaoDePulo;
     [SerializeField]private Animator transi;
+    [SerializeField]private GameObject telawinlose;
+    
     
 
     void Start()
@@ -24,6 +26,7 @@ public class MainMenu : MonoBehaviour
         canvasPause.SetActive(false);
         fundo.SetActive(true);
         BotaoDePulo.SetActive(false);
+        telawinlose.SetActive(false);
     }
     public void iniciar(){
         StartCoroutine( transicao());
@@ -39,6 +42,7 @@ public class MainMenu : MonoBehaviour
         canvasPause.SetActive(true);
         fundo.SetActive(false);
         transi.SetTrigger("end");
+        telawinlose.SetActive(true);
     }
     public void credito(){
         creditos.SetActive(true);

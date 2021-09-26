@@ -11,16 +11,16 @@ public class reputacao : MonoBehaviour
     private int WavesRestantes;
     private GameObject spwaner;
     private GameObject winlose;
-
+    public bool iniciou;
     private void Start(){
         reputacaoAtual = reputacaoInicial;
         spwaner = GameObject.FindGameObjectWithTag("spawner");
         winlose = GameObject.FindGameObjectWithTag("winlose");
     }
-    void Update()
+    void LateUpdate()
     {
         WavesRestantes = spwaner.GetComponent<SpawnaInimigos>().WavesRestantes;
-        if(WavesRestantes <= 0 ){
+        if(WavesRestantes <= 0 && iniciou== true){
             if(GameObject.FindGameObjectWithTag("Enemy") == null){
                 if(reputacaoAtual >= reputacaoNecessaria){
                     winlose.GetComponent<winlose>().ganhou();
