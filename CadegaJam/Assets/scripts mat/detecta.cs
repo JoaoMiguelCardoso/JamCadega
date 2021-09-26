@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class detecta : MonoBehaviour
 {
     public List<faction> AlvosPossiveis = new List<faction>();
     public List<Criaturas> Targets = new List<Criaturas>();
     public Criaturas AlvoAtual;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Criaturas>()) {
@@ -31,7 +33,7 @@ public class detecta : MonoBehaviour
         }
     }
 
-    private void Escolhe()
+   public void Escolhe()
     {
         if (Targets.Contains(AlvoAtual) == false )
         {
@@ -48,5 +50,6 @@ public class detecta : MonoBehaviour
     private void Update()
     {
         Escolhe();
+       
     }
 }

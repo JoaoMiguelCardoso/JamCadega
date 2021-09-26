@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - caminho
+  - Undefined
+  - Enemy
+  - Allie
   layers:
   - Default
   - TransparentFX
