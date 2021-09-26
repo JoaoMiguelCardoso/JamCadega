@@ -49,3 +49,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Cenario
+    uniqueID: 1128819149
+    locked: 0
+  - name: Torres
+    uniqueID: 1445444235
+    locked: 0
+  - name: Inimigos
+    uniqueID: 1615535757
+    locked: 0
