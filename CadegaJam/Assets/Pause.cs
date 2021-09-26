@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
     private bool pausado;
     [SerializeField]private GameObject telapause;
     [SerializeField]private GameObject option;
+    [SerializeField]private Animator transicao;
     
     void Start()
     {
@@ -47,6 +48,13 @@ public class Pause : MonoBehaviour
         Application.Quit();
     }
     public void main(){
+        Time.timeScale = 1f;
+        StartCoroutine( transi());
+    }
+    
+    IEnumerator transi(){
+        transicao.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(0);
     }
 }
