@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Torre 2
   m_EditorClassIdentifier: 
   torre: {fileID: 3639822331260157467, guid: 1a5a36da07be70d419bd6b3785987488, type: 3}
-  custo: 120
-  valorArea: 5
+  custo: 170
+  valorArea: 10
   sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
   descricao: "Esta \xE9 uma torre 2\nEla faz n\xE3o sei o que\nbottom text"
   alcance: 3

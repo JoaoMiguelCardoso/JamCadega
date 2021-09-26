@@ -4901,21 +4901,33 @@ PrefabInstance:
       value: spawner
       objectReference: {fileID: 0}
     - target: {fileID: 7666025163526297130, guid: de36ceefe0e4825409798d1fd02ecb5d, type: 3}
+      propertyPath: incremento
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666025163526297130, guid: de36ceefe0e4825409798d1fd02ecb5d, type: 3}
       propertyPath: QuantidadeWaves
-      value: 2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666025163526297130, guid: de36ceefe0e4825409798d1fd02ecb5d, type: 3}
+      propertyPath: TempoEntreWaves
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7666025163526297130, guid: de36ceefe0e4825409798d1fd02ecb5d, type: 3}
       propertyPath: QuantidadeInicial
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666025163526297130, guid: de36ceefe0e4825409798d1fd02ecb5d, type: 3}
+      propertyPath: TempoEntreInimigos
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7666025163526297130, guid: de36ceefe0e4825409798d1fd02ecb5d, type: 3}
       propertyPath: Inimigos.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7666025163526297130, guid: de36ceefe0e4825409798d1fd02ecb5d, type: 3}
       propertyPath: Inimigos.Array.data[0]
       value: 
-      objectReference: {fileID: 880324441811192866, guid: 9b93cd41d16aadd49ad832db5c8a2536, type: 3}
+      objectReference: {fileID: 2093982871240799948, guid: 0e02f48e835a00d468cbb1c48aba9aa0, type: 3}
     - target: {fileID: 7666025163526297130, guid: de36ceefe0e4825409798d1fd02ecb5d, type: 3}
       propertyPath: Inimigos.Array.data[1]
       value: 

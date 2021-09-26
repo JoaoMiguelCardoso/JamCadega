@@ -53,7 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 873549908257378109, guid: 47e8562211f851548bbd1f7c82ae8b85, type: 3}
       propertyPath: velocidade
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 873549908257378109, guid: 47e8562211f851548bbd1f7c82ae8b85, type: 3}
+      propertyPath: aumentoDeReputacao
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 873549908257378109, guid: 47e8562211f851548bbd1f7c82ae8b85, type: 3}
+      propertyPath: decrementoDeReputacao
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 873549908257378110, guid: 47e8562211f851548bbd1f7c82ae8b85, type: 3}
       propertyPath: m_Name

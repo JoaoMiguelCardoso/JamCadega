@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 15
   satisfacao: 5
-  moedas: 5
+  moedas: 2
 --- !u!1 &5632340247883640556
 GameObject:
   m_ObjectHideFlags: 0

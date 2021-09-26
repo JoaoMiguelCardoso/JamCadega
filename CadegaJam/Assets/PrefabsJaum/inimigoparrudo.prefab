@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e88379590e4b31438f39ee747a4b0f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 4
-  aumentoDeReputacao: 0
-  decrementoDeReputacao: 0
+  velocidade: 0.8
+  aumentoDeReputacao: 25
+  decrementoDeReputacao: 25
 --- !u!114 &1654681815473080429
 MonoBehaviour:
   m_ObjectHideFlags: 0

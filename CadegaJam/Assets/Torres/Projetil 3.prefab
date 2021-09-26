@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4491612029530194890, guid: 72fb0dacc098d69478a5751254f8ca8a, type: 3}
       propertyPath: moedas
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4491612029530194890, guid: 72fb0dacc098d69478a5751254f8ca8a, type: 3}
       propertyPath: satisfacao
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4491612029530194890, guid: 72fb0dacc098d69478a5751254f8ca8a, type: 3}
       propertyPath: velocidade
