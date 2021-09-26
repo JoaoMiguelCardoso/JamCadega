@@ -10,6 +10,7 @@ TagManager:
   - Allie
   - spawner
   - reputa
+  - winlose
   layers:
   - Default
   - TransparentFX

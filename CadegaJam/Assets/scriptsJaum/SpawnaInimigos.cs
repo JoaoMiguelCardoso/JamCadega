@@ -16,6 +16,7 @@ public class SpawnaInimigos : MonoBehaviour
     private int quantidadeWave;
     private int foram;
     private int Wave;
+    public int WavesRestantes;
     private int InimigoVari;
     private int waveinimigo;
     private int tipos;
@@ -31,6 +32,7 @@ public class SpawnaInimigos : MonoBehaviour
 
     void Update()
     {
+        WavesRestantes = QuantidadeWaves - Wave;
         spawna();
     }
 

@@ -8,21 +8,24 @@ public class reputacao : MonoBehaviour
     [SerializeField]private float reputacaoInicial;
     [SerializeField]private float reputacaoMax;
     private float reputacaoAtual;
-    public bool ganhou;
-    public bool perdeu;
     private int WavesRestantes;
+    private GameObject spwaner;
+    private GameObject winlose;
 
     private void Start(){
         reputacaoAtual = reputacaoInicial;
+        spwaner = GameObject.FindGameObjectWithTag("spawner");
+        winlose = GameObject.FindGameObjectWithTag("winlose");
     }
     void Update()
     {
+        WavesRestantes = spwaner.GetComponent<SpawnaInimigos>().WavesRestantes;
         if(WavesRestantes <= 0 ){
-            if(GameObject.FindGameObjectsWithTag("Enemy") == null){
+            if(GameObject.FindGameObjectWithTag("Enemy") == null){
                 if(reputacaoAtual >= reputacaoNecessaria){
-                    ganhou = true;
+                    winlose.GetComponent<winlose>().ganhou();
                 }else{
-                    perdeu = true;
+                    winlose.GetComponent<winlose>().perdeu();
                 }
             }
         }
@@ -39,6 +42,7 @@ public class reputacao : MonoBehaviour
         if(reputacaoAtual - a > 0){
             reputacaoAtual = reputacaoAtual - a;
         }else if(reputacaoInicial -a <= 0){
+            winlose.GetComponent<winlose>().perdeu();
             reputacaoAtual = 0;
         }
     }
