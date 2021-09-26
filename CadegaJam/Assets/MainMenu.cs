@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField]private Animator transi;
     [SerializeField]private GameObject telawinlose;
     [SerializeField]private GameObject texto;
-    
+    [SerializeField]private GameObject comojoga;
     
 
     void Start()
@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
         BotaoDePulo.SetActive(false);
         telawinlose.SetActive(false);
         texto.SetActive(false);
+        comojoga.SetActive(false);
     }
     public void iniciar(){
         StartCoroutine( transicao());
@@ -62,8 +63,13 @@ public class MainMenu : MonoBehaviour
         inicio.SetActive(true);
         option.SetActive(false);
         creditos.SetActive(false);
+        comojoga.SetActive(false);
     }
     public void quit(){
         Application.Quit();
+    }
+    public void tuto(){
+        comojoga.SetActive(true);
+        inicio.SetActive(false);
     }
 }
