@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea42868859d5eaf42b0425a14461b382, type: 3}
   m_Name: Torre 2
   m_EditorClassIdentifier: 
-  torre: {fileID: 2369547870433900688, guid: 45bfdc5a6dc76734d92ab6911ac4f590, type: 3}
-  custo: 10
+  torre: {fileID: 3639822331260157467, guid: 1a5a36da07be70d419bd6b3785987488, type: 3}
+  custo: 120
   valorArea: 5
   sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
   descricao: "Esta \xE9 uma torre 2\nEla faz n\xE3o sei o que\nbottom text"

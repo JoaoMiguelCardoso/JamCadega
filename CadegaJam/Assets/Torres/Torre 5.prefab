@@ -7,9 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3197091969167834548, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197091969167834548, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7036772
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197091969167834548, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
+      propertyPath: m_Color.r
+      value: 0.514151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197091969650442017, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
+      propertyPath: m_Radius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3197091969650442020, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
       propertyPath: m_Name
-      value: Torre 1
+      value: Torre 5
       objectReference: {fileID: 0}
     - target: {fileID: 3197091969650442022, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
       propertyPath: m_RootOrder
@@ -54,6 +70,14 @@ PrefabInstance:
     - target: {fileID: 3197091969650442022, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197091969650442023, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
+      propertyPath: projetil
+      value: 
+      objectReference: {fileID: 3550640247091863197, guid: b1a5309f765a379498e3d02aef3f9757, type: 3}
+    - target: {fileID: 3197091969650442023, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
+      propertyPath: intervaloAtaque
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}

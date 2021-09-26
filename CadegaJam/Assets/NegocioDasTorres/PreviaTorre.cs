@@ -41,7 +41,6 @@ public class PreviaTorre : MonoBehaviour
     {
         transform.position = posAjustada;
         posValida = Physics2D.OverlapCircle(transform.position, 0.25f, areaValida)
-                && !Physics2D.OverlapCircle(transform.position, 0.25f, areaInvalida)
                 && tabuleiro.VerificarPosicao(transform.position, valorAtual);
         
         // if(posValida)
