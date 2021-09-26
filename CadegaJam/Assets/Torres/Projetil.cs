@@ -12,11 +12,17 @@ public class Projetil : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
+        if (alvo == null)
+        {
+            Retornar();
+            return;
+        }
+
         transform.position = Vector2.MoveTowards(transform.position, alvo.position, velocidade * Time.deltaTime);
     }
 
@@ -36,15 +42,19 @@ public class Projetil : MonoBehaviour
         return satisfacao;
     }
 
+    void Retornar()
+    {
+        torre.RetornarProjetil(this);
+        DefinirAlvo(null, null);
+        gameObject.SetActive(false);
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.transform == alvo)
+        if (col.transform == alvo)
         {
-            torre.RetornarProjetil(this);
             satisfacaoInimigo.AumentarSatisfacao(satisfacao);
-            DefinirAlvo(null, null);
-
-            gameObject.SetActive(false);
+            Retornar();
         }
     }
 }

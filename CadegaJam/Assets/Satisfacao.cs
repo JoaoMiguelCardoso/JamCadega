@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Satisfacao : MonoBehaviour
 {
+    public bool satisfeito;
     [SerializeField] private float satisfacaoInicial;
     [SerializeField] private float satisfacaoMax;
     [SerializeField] private float satsfacaoPorTiro;
+
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private Image barraSatisfacao;
+
     private float satisfacaoAtual;
-    public bool satisfeito;
 
     void Start()
     {
-        satisfacaoAtual = satisfacaoInicial;
+        canvas.worldCamera = Camera.main;
+        AumentarSatisfacao(satisfacaoInicial);
     }
 
     void Update()
@@ -25,6 +31,8 @@ public class Satisfacao : MonoBehaviour
         satisfacaoAtual = Mathf.Clamp(satisfacaoAtual + satisfacao, 0, satisfacaoMax);
 
         satisfeito = satisfacaoAtual == satisfacaoMax;
+
+        barraSatisfacao.fillAmount = satisfacaoAtual / satisfacaoMax;
 
         return satisfeito;
     }
