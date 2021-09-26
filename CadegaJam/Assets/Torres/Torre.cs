@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class Torre : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] List<string> tagsAtacar;
     [SerializeField] float intervaloAtaque;
     [SerializeField] Projetil projetil;
     [SerializeField] Canvas objRemover;
@@ -52,7 +51,7 @@ public class Torre : MonoBehaviour, IPointerClickHandler
 
         Projetil p = projeteis[0];
         p.gameObject.SetActive(true);
-        p.transform.position = transform.position;
+        p.transform.position = transform.position + (alvoAtual.position - transform.position).normalized;
         p.DefinirAlvo(alvoAtual, inimigoAtual);
         projeteis.Remove(p);
 
@@ -76,7 +75,7 @@ public class Torre : MonoBehaviour, IPointerClickHandler
         projeteis.Add(p);
     }
 
-    void TrocarAlvo()
+    public void TrocarAlvo()
     {
         inimigos.Remove(alvoAtual);
         alvoAtual = null;
@@ -88,19 +87,18 @@ public class Torre : MonoBehaviour, IPointerClickHandler
         gerenciadorTorres = gerenciador;
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    public void AdicionarAlvo(Transform alvo)
     {
-        if (tagsAtacar.Contains(col.tag))
-            inimigos.Add(col.transform);
+        inimigos.Add(alvo);
     }
 
-    void OnTriggerExit2D(Collider2D col)
+    public void RemoverAlvo(Transform alvo)
     {
-        if (col.transform == alvoAtual)
+        if (alvo == alvoAtual)
             TrocarAlvo();
 
-        if (inimigos.Contains(col.transform))
-            inimigos.Remove(col.transform);
+        if (inimigos.Contains(alvo))
+            inimigos.Remove(alvo);
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -124,6 +122,11 @@ public class Torre : MonoBehaviour, IPointerClickHandler
     public void ConfirmarRemocao()
     {
         gerenciadorTorres.VenderTorre(transform.position, dadosTorre);
+        foreach (Projetil p in projeteis)
+        {
+            if(!p.gameObject.activeSelf)
+                Destroy(p.gameObject);
+        }
         Destroy(gameObject);
     }
 }

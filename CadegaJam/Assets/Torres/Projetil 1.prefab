@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4491612029530194891}
   - component: {fileID: 4491612029530194892}
   - component: {fileID: 4491612029530194890}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Projetil 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4155314155320204658}
   - component: {fileID: 4614852406203343667}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpriteProjetil
   m_TagString: Untagged
   m_Icon: {fileID: 0}

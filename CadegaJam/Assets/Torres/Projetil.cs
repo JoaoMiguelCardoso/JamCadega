@@ -54,7 +54,18 @@ public class Projetil : MonoBehaviour
         if (col.transform == alvo)
         {
             satisfacaoInimigo.AumentarSatisfacao(satisfacao);
+            if (torre == null)
+            {
+                TorreRemovida();
+                return;
+            }
+
             Retornar();
         }
+    }
+
+    public void TorreRemovida()
+    {
+        Destroy(gameObject);
     }
 }
