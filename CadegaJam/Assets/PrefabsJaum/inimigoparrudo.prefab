@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1654681815473080429}
   - component: {fileID: 3545363385034803466}
   m_Layer: 0
-  m_Name: inimigo
+  m_Name: inimigoparrudo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e88379590e4b31438f39ee747a4b0f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
+  velocidade: 4
 --- !u!114 &1654681815473080429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   satisfacaoInicial: 20
-  SatisfacaoMax: 100
+  SatisfacaoMax: 200
   SatsfacaoPorTiro: 1
   satisfeito: 0
 --- !u!61 &3545363385034803466

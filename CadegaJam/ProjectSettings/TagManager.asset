@@ -8,6 +8,8 @@ TagManager:
   - Undefined
   - Enemy
   - Allie
+  - spawner
+  - reputa
   layers:
   - Default
   - TransparentFX
