@@ -26,7 +26,7 @@ public class BotaoLoja : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        loja.ExibirDescricao(id, transform.position.y);
+        loja.ExibirDescricao(id, transform.position.x);
     }
 
     public void OnPointerExit(PointerEventData eventData)

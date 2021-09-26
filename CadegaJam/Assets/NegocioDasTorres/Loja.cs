@@ -51,10 +51,10 @@ public class Loja : MonoBehaviour
         objDescricao.SetActive(ativo);
     }
 
-    public void ExibirDescricao(int id, float posY)
+    public void ExibirDescricao(int id, float posX)
     {
         AlterarObjDescricao(true);
         txtDescricao.text = torres[id].descricao;
-        objDescricao.transform.position = new Vector2(objDescricao.transform.position.x, posY);
+        objDescricao.transform.position = new Vector2(posX, objDescricao.transform.position.y);
     }
 }
