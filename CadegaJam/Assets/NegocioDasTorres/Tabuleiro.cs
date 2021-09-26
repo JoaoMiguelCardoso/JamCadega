@@ -55,16 +55,20 @@ public class Tabuleiro : MonoBehaviour
             for (int i2 = (int)(posicao.x - 1.5f); i2 < (int)(posicao.x + 1.5f); i2++)
             {
                 Vector2 pos = new Vector2(i2 + 0.5f, i + 0.5f);
-                Debug.Log(pos + "x: " + i2 + ", y: " + i);
 
-                if (pos == posicao)
-                    posicoes[pos] = 50;
-                else if (posicoes.ContainsKey(pos))
+                if (posicoes.ContainsKey(pos))
                 {
-                    posicoes[pos] += valor;
+                    posicoes[pos] += pos == posicao ? 50 : valor;
+                    posicoes[pos] = Mathf.Clamp(posicoes[pos], 0, 50);
+
                     valores[pos].AtualizarValor(posicoes[pos]);
                 }
             }
         }
+    }
+
+    public bool VerificarPosicao(Vector2 pos, int valor)
+    {
+        return posicoes.ContainsKey(pos) && (posicoes[pos] + valor <= 50);
     }
 }

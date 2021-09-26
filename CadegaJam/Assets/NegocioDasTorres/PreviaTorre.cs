@@ -8,9 +8,11 @@ public class PreviaTorre : MonoBehaviour
     [SerializeField] GameObject posicaoInvalida;
     [SerializeField] LayerMask areaValida;
     [SerializeField] LayerMask areaInvalida;
+    [SerializeField] Tabuleiro tabuleiro;
 
     bool posValida;
     Vector2 posAjustada;
+    int valorAtual;
 
     void Start()
     {
@@ -39,7 +41,8 @@ public class PreviaTorre : MonoBehaviour
     {
         transform.position = posAjustada;
         posValida = Physics2D.OverlapCircle(transform.position, 0.25f, areaValida)
-                && !Physics2D.OverlapCircle(transform.position, 0.25f, areaInvalida);
+                && !Physics2D.OverlapCircle(transform.position, 0.25f, areaInvalida)
+                && tabuleiro.VerificarPosicao(transform.position, valorAtual);
         
         // if(posValida)
         //     Debug.Log(transform.position);
@@ -50,6 +53,11 @@ public class PreviaTorre : MonoBehaviour
     public void SelecionarSprite(Sprite sprite)
     {
         spritePrevia.sprite = sprite;
+    }
+
+    public void DefinirValor(int valor)
+    {
+        valorAtual = valor;
     }
 
     public bool PosicaoValida()

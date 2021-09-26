@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torre: {fileID: 2369547870433900688, guid: 7f399e540817d4f45993acdf81a24b29, type: 3}
   custo: 5
+  valorArea: 2
   sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
   descricao: "Esta \xE9 uma torre\nEla faz n\xE3o sei o que\nbottom text"

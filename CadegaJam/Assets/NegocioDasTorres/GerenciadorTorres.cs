@@ -54,6 +54,7 @@ public class GerenciadorTorres : MonoBehaviour
         torreAtual = torre;
         AlterarEstadoPrevia(true);
         AlterarSpritePrevia(torreAtual.sprite);
+        previa.DefinirValor(torreAtual.valorArea);
     }
 
     void PosicionarTorre(GameObject torre, Vector2 posicao)

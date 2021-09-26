@@ -233,6 +233,7 @@ MonoBehaviour:
   areaInvalida:
     serializedVersion: 2
     m_Bits: 192
+  tabuleiro: {fileID: 975391573}
 --- !u!1 &150485611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975391572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: -2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1236746040}
@@ -1326,7 +1327,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5707547, g: 1, b: 0.68525666, a: 0}
+  m_BackGroundColor: {r: 0.17030083, g: 0.4056604, b: 0.23291944, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2214,7 +2215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previa: {fileID: 104991152}
   loja: {fileID: 1647224060}
-  tabuleiro: {fileID: 0}
+  tabuleiro: {fileID: 975391573}
 --- !u!4 &2006144669
 Transform:
   m_ObjectHideFlags: 0
