@@ -28,7 +28,7 @@ public class Satisfacao : MonoBehaviour
 
     public bool AumentarSatisfacao(float satisfacao)
     {
-        satisfacaoAtual = Mathf.Clamp(satisfacaoAtual + satisfacao, 0, satisfacaoMax);
+        satisfacaoAtual = Mathf.Clamp(satisfacaoAtual + (satisfacao * satsfacaoPorTiro), 0, satisfacaoMax);
 
         satisfeito = satisfacaoAtual == satisfacaoMax;
 

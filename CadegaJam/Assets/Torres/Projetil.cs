@@ -6,9 +6,11 @@ public class Projetil : MonoBehaviour
 {
     [SerializeField] float velocidade;
     [SerializeField] float satisfacao;
+    [SerializeField] float moedas;
     Torre torre;
     Transform alvo;
     Satisfacao satisfacaoInimigo;
+    Loja loja;
 
     void Start()
     {
@@ -37,6 +39,11 @@ public class Projetil : MonoBehaviour
         satisfacaoInimigo = s;
     }
 
+    public void DefinirLoja(Loja l)
+    {
+        loja = l;
+    }
+
     public float QtdSatisfacao()
     {
         return satisfacao;
@@ -54,6 +61,7 @@ public class Projetil : MonoBehaviour
         if (col.transform == alvo)
         {
             satisfacaoInimigo.AumentarSatisfacao(satisfacao);
+            loja.AcertarProjetil(moedas);
             if (torre == null)
             {
                 TorreRemovida();

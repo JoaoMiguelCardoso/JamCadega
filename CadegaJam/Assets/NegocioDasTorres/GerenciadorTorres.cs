@@ -80,4 +80,9 @@ public class GerenciadorTorres : MonoBehaviour
     {
         loja.TorreVendida(posicao, dados);
     }
+
+    public Loja RetornarLoja()
+    {
+        return loja;
+    }
 }

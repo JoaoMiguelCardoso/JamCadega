@@ -7,13 +7,13 @@ public class Loja : MonoBehaviour
 {
     [SerializeField] List<DadosTorre> torres;
     [SerializeField] GerenciadorTorres gerenciadorTorres;
-    [SerializeField] int qtdInicialMoedas;
+    [SerializeField] float qtdInicialMoedas;
     [SerializeField] Text txtMoedas;
     [SerializeField] GameObject objDescricao;
     [SerializeField] Text txtDescricao;
     [SerializeField] Tabuleiro tabuleiro;
 
-    int moedas;
+    float moedas;
     DadosTorre ultimaTorre;
 
     void Start()
@@ -49,10 +49,15 @@ public class Loja : MonoBehaviour
         tabuleiro.AlterarValorArea(posicao, -dados.valorArea);
     }
 
-    void AlterarMoedas(int valor)
+    public void AcertarProjetil(float valor)
+    {
+        AlterarMoedas(valor);
+    }
+
+    void AlterarMoedas(float valor)
     {
         moedas += valor;
-        txtMoedas.text = moedas.ToString();
+        txtMoedas.text = moedas.ToString("F2");
     }
 
     public void AlterarObjDescricao(bool ativo)

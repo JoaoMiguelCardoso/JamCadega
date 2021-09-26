@@ -66,6 +66,7 @@ public class Torre : MonoBehaviour, IPointerClickHandler
             Projetil p = Instantiate(projetil, transform.position, Quaternion.identity);
             projeteis.Add(p);
             p.DefinirTorre(this);
+            p.DefinirLoja(gerenciadorTorres.RetornarLoja());
             p.gameObject.SetActive(false);
         }
     }
