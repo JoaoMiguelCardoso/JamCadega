@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: satisfacao
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4491612029530194890, guid: 72fb0dacc098d69478a5751254f8ca8a, type: 3}
+      propertyPath: velocidade
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4491612029530194891, guid: 72fb0dacc098d69478a5751254f8ca8a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -63,5 +67,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Projetil 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4614852406203343667, guid: 72fb0dacc098d69478a5751254f8ca8a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1370661682523340017, guid: 9fa33a20dc998a747b3a00be117c9a5d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72fb0dacc098d69478a5751254f8ca8a, type: 3}

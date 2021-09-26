@@ -8,6 +8,7 @@ public class GerenciadorTorres : MonoBehaviour
     [SerializeField] PreviaTorre previa;
     [SerializeField] Loja loja;
     [SerializeField] Tabuleiro tabuleiro;
+    [SerializeField] AudioClip somColocarTorre;
 
     DadosTorre torreAtual;
     Torre torreSelecionada;
@@ -65,6 +66,7 @@ public class GerenciadorTorres : MonoBehaviour
         t.DefinirGerenciador(this);
         AlterarEstadoPrevia(false);
         loja.TorreComprada(posicao);
+        GerenciadorSons.instancia.ReproduzirEfeito(somColocarTorre, 0.2f, false);
     }
 
     public bool AutorizarRemocao(Torre t)

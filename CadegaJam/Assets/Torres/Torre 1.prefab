@@ -235,6 +235,7 @@ MonoBehaviour:
   projetil: {fileID: 4491612029530194890, guid: 72fb0dacc098d69478a5751254f8ca8a, type: 3}
   objRemover: {fileID: 5250822244269225872}
   dadosTorre: {fileID: 11400000, guid: 3e5f7f3b74b7cb0458e527dff3fbfe34, type: 2}
+  somAtirar: {fileID: 8300000, guid: eed557cd841fc904ab679d260fa10dee, type: 3}
 --- !u!50 &3197091969650442016
 Rigidbody2D:
   serializedVersion: 4

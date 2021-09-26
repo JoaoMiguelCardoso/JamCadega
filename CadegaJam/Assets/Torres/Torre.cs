@@ -9,6 +9,7 @@ public class Torre : MonoBehaviour, IPointerClickHandler
     [SerializeField] Projetil projetil;
     [SerializeField] Canvas objRemover;
     [SerializeField] DadosTorre dadosTorre;
+    [SerializeField] AudioClip somAtirar;
 
     List<Transform> inimigos = new List<Transform>();
     Transform alvoAtual;
@@ -54,6 +55,7 @@ public class Torre : MonoBehaviour, IPointerClickHandler
         p.transform.position = transform.position + (alvoAtual.position - transform.position).normalized;
         p.DefinirAlvo(alvoAtual, inimigoAtual);
         projeteis.Remove(p);
+        GerenciadorSons.instancia.ReproduzirEfeito(somAtirar, 0.1f, true);
 
         if (inimigoAtual.SatisfacaoSuficiente(projetil.QtdSatisfacao()))
             TrocarAlvo();
