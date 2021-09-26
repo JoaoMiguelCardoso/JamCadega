@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea42868859d5eaf42b0425a14461b382, type: 3}
   m_Name: Torre 1
   m_EditorClassIdentifier: 
-  torre: {fileID: 2369547870433900688, guid: 7f399e540817d4f45993acdf81a24b29, type: 3}
+  torre: {fileID: 3197091969650442020, guid: 8f27464ab71a4a84b9370591a8fdd803, type: 3}
   custo: 5
   valorArea: 2
   sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
