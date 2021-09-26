@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField]private GameObject canvasPause;
     [SerializeField]private GameObject jogo;
     [SerializeField]private GameObject fundo;
+    [SerializeField]private GameObject BotaoDePulo;
     [SerializeField]private Animator transi;
     
 
@@ -22,6 +23,7 @@ public class MainMenu : MonoBehaviour
         jogo.SetActive(false);
         canvasPause.SetActive(false);
         fundo.SetActive(true);
+        BotaoDePulo.SetActive(false);
     }
     public void iniciar(){
         StartCoroutine( transicao());
@@ -33,6 +35,7 @@ public class MainMenu : MonoBehaviour
         creditos.SetActive(false);
         option.SetActive(false);
         jogo.SetActive(true);
+        BotaoDePulo.SetActive(true);
         canvasPause.SetActive(true);
         fundo.SetActive(false);
         transi.SetTrigger("end");

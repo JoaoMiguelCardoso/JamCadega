@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Satisfacao : MonoBehaviour
 {
-    [SerializeField]private int satisfacaoInicial;
-    [SerializeField]private int SatisfacaoMax;
-    [SerializeField]private int SatsfacaoPorTiro;
-    private int SatisfacaoAtual;
+    [SerializeField]private float satisfacaoInicial;
+    [SerializeField]private float SatisfacaoMax;
+    [SerializeField]private float SatsfacaoPorTiro;
+    private float SatisfacaoAtual;
     public bool satisfeito;
     void Start()
     {
