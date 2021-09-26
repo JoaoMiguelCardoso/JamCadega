@@ -18,20 +18,23 @@ public class Loja : MonoBehaviour
 
     void Start()
     {
+        ultimaTorre = torres[0];
         AlterarMoedas(qtdInicialMoedas);
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             AlterarMoedas(20);
     }
 
     public void SelecionarTorre(int idTorre)
     {
-        ultimaTorre = torres[idTorre];
-        if(moedas >= ultimaTorre.custo)
+        if (moedas >= torres[idTorre].custo)
+        {
+            ultimaTorre = torres[idTorre];
             gerenciadorTorres.EscolherTorre(ultimaTorre);
+        }
     }
 
     public void TorreComprada(Vector2 posicao)
