@@ -15,6 +15,8 @@ MonoBehaviour:
   torre: {fileID: 3639822331260157467, guid: 1a5a36da07be70d419bd6b3785987488, type: 3}
   custo: 170
   valorArea: 10
-  sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
-  descricao: "custo: 170\nEsta \xE9 uma torre de refrigerante"
+  sprite: {fileID: -7921052967969465774, guid: 9fa33a20dc998a747b3a00be117c9a5d, type: 3}
+  descricao: 'Custo: 170
+
+    Coquinha gelada hmm'
   alcance: 3

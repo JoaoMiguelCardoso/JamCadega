@@ -15,6 +15,6 @@ MonoBehaviour:
   torre: {fileID: 3639822331260157467, guid: 41ad61da6f004c0439fc3a53e0c0c635, type: 3}
   custo: 400
   valorArea: 20
-  sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
-  descricao: "custo: 400\nEsta \xE9 uma torre de bolo\n"
+  sprite: {fileID: -5906973516983679737, guid: 9fa33a20dc998a747b3a00be117c9a5d, type: 3}
+  descricao: "Custo: 400\nBolo de fub\xE1 del\xEDcia\n"
   alcance: 3

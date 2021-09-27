@@ -15,6 +15,10 @@ MonoBehaviour:
   torre: {fileID: 3639822331260157467, guid: 360cf5586e1fc884f8af383961cd561b, type: 3}
   custo: 120
   valorArea: 15
-  sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
-  descricao: "custo: 120\nEsta \xE9 uma torre de batatas\n"
+  sprite: {fileID: -1370661682523340017, guid: 9fa33a20dc998a747b3a00be117c9a5d, type: 3}
+  descricao: 'Ccusto: 120
+
+    Batata.
+
+'
   alcance: 2.5

@@ -15,6 +15,6 @@ MonoBehaviour:
   torre: {fileID: 3639822331260157467, guid: 5cf6ca45a40ff794fad6bdb75b0f4180, type: 3}
   custo: 250
   valorArea: 20
-  sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
-  descricao: "custo: 250\nEsta \xE9 uma torre de sorvete"
+  sprite: {fileID: 2788568348960109317, guid: 9fa33a20dc998a747b3a00be117c9a5d, type: 3}
+  descricao: "Custo: 250\n\xC9 s\xF3 por a pazinha..."
   alcance: 2
