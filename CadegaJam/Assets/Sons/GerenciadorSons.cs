@@ -17,9 +17,13 @@ public class GerenciadorSons : MonoBehaviour
         instancia = this;
     }
 
+    [SerializeField] List<AudioClip> musicas = new List<AudioClip>();
+    [SerializeField] AudioSource source;
+
     public Transform sons;
 
     List<AudioSource> objsSom = new List<AudioSource>();
+    bool trocandoMusica;
 
     public void ReproduzirEfeito(AudioClip clip, float volume, bool pitchAleatorio)
     {
@@ -29,6 +33,37 @@ public class GerenciadorSons : MonoBehaviour
         if (pitchAleatorio)
             _source.pitch = Random.Range(0.9f, 1.1f);
         _source.Play();
+    }
+
+    public void TrocarMusica(int indexMusica)
+    {
+        if(!trocandoMusica)
+            StartCoroutine(Musica(musicas[indexMusica]));
+    }
+
+    IEnumerator Musica(AudioClip musica)
+    {
+        trocandoMusica = true;
+        float volumeInicial = source.volume;
+
+        while (source.volume > 0)
+        {
+            source.volume -= 0.01f;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        source.Stop();
+        source.clip = musica;
+        source.Play();
+
+        while (source.volume < volumeInicial)
+        {
+            source.volume += 0.01f;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        source.volume = volumeInicial;
+        trocandoMusica = false;
     }
 
     AudioSource ObjSom()
