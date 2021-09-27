@@ -46,6 +46,7 @@ public class MainMenu : MonoBehaviour
         option.SetActive(false);
         fundo.SetActive(false);
         yield return new WaitForSeconds(0.5f);
+        GerenciadorSons.instancia.TrocarMusica(1);
         jogo.SetActive(true);
         BotaoDePulo.SetActive(true);
         canvasPause.SetActive(true);

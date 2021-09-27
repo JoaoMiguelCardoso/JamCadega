@@ -55,6 +55,7 @@ public class Pause : MonoBehaviour
     IEnumerator transi(){
         transicao.SetTrigger("start");
         yield return new WaitForSeconds(1f);
+        GerenciadorSons.instancia.TrocarMusica(0);
         SceneManager.LoadScene(0);
     }
 }
