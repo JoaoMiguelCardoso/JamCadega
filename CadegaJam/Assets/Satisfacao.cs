@@ -34,6 +34,8 @@ public class Satisfacao : MonoBehaviour
 
         barraSatisfacao.fillAmount = satisfacaoAtual / satisfacaoMax;
 
+        canvas.gameObject.SetActive(!satisfeito);
+
         return satisfeito;
     }
 
