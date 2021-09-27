@@ -16,5 +16,5 @@ MonoBehaviour:
   custo: 250
   valorArea: 20
   sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
-  descricao: "custo: 250\nEsta \xE9 uma torre de"
+  descricao: "custo: 250\nEsta \xE9 uma torre de sorvete"
   alcance: 2

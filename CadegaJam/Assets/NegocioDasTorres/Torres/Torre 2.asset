@@ -16,5 +16,5 @@ MonoBehaviour:
   custo: 170
   valorArea: 10
   sprite: {fileID: 21300000, guid: b5e04f451730b4346bc4309d65d758aa, type: 3}
-  descricao: "custo: 170\nEsta \xE9 uma torre de "
+  descricao: "custo: 170\nEsta \xE9 uma torre de refrigerante"
   alcance: 3
