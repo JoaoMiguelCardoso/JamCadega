@@ -24,7 +24,6 @@ public class SpawnaInimigos : MonoBehaviour
 
     void Start()
     {
-        tempoatual = TempoEntreWaves;
         quantidadeWave = QuantidadeInicial;
         InimigoVari = QuantidadeWaves/Inimigos.Count ;
         tipos = Inimigos.Count;
