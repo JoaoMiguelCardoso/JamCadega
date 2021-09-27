@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SpawnaInimigos : MonoBehaviour
 {
     [SerializeField]private float TempoEntreWaves;
@@ -10,6 +10,7 @@ public class SpawnaInimigos : MonoBehaviour
     [SerializeField]private int QuantidadeInicial;
     [SerializeField]private int incremento;
     [SerializeField]private int QuantidadeWaves;
+    [SerializeField]private Text txt;
     private float tempoatual;
     private float tempoInimigo;
     private bool surge = true;
@@ -24,7 +25,6 @@ public class SpawnaInimigos : MonoBehaviour
 
     void Start()
     {
-        tempoatual = TempoEntreWaves;
         quantidadeWave = QuantidadeInicial;
         InimigoVari = QuantidadeWaves/Inimigos.Count ;
         tipos = Inimigos.Count;
@@ -34,6 +34,8 @@ public class SpawnaInimigos : MonoBehaviour
 
     void Update()
     {
+        float diferenca= tempoatual - Time.time;
+        txt.text = ""+diferenca;
         WavesRestantes = QuantidadeWaves - Wave;
         spawna();
     }

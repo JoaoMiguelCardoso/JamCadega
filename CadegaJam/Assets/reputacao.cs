@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class reputacao : MonoBehaviour
 {
     [SerializeField]private float reputacaoNecessaria;
     [SerializeField]private float reputacaoInicial;
     [SerializeField]private float reputacaoMax;
+    [SerializeField]private Text caixa;
     private float reputacaoAtual;
     private int WavesRestantes;
     private GameObject spwaner;
     private GameObject winlose;
+
     public bool iniciou;
     private void Start(){
         reputacaoAtual = reputacaoInicial;
@@ -29,6 +31,7 @@ public class reputacao : MonoBehaviour
                 }
             }
         }
+        caixa.text = reputacaoAtual +"/"+ reputacaoMax;
     }
 
     public void aumentareputa(float a){
